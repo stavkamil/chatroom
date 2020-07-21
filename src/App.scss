@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$primaryColor: #aa2ce4;
+$textColor: #333;
+$background: #f4eae2;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  font-size: 20px;
+  background-color: $background;
+  color: $textColor;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 1px #00000013;
+  margin-bottom: 2rem;
+  padding: 0.5rem 3rem;
+  h1 {
+    width: 100%;
+    color: $primaryColor;
+    font-weight: 900;
+    letter-spacing: 0.05rem;
+    font-size: 1.6rem;
+  }
+}
+
+.container {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  span {
+    font-weight: 500;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+  }
+}
+
+.app__form {
+  width: 100%;
+  padding: 25px 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  background-color: transparent;
+  margin-top: 20px;
+
+  .form-container {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+    input {
+      flex: 1;
+      font-size: inherit;
+      padding: 12px 15px;
+      border: 1px solid transparent;
+      background-color: #fff;
+      border-radius: 50px 0px 0px 50px;
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      cursor: pointer;
+      flex: 0;
+      background-color: #fff;
+      border: none;
+      border-radius: 0px 50px 50px 0px;
+      padding-right: 15px;
+      &:focus {
+        outline: none;
+      }
+      i {
+        margin-right: 0.5rem;
+        color: $primaryColor;
+        font-size: 33px;
+        padding: 8px;
+      }
+    }
+  }
+}
+
+.message {
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  width: fit-content;
+}
+
+.message__user {
+  position: relative;
+  margin-left: auto;
+  color: white;
+  text-align: right;
+}
+
+.message__userCard {
+  position: relative;
+  background-color: $primaryColor;
+  color: white;
+  font-weight: 700;
+  padding: 25px;
+  border-radius: 50px 50px 0px 50px;
+}
+
+.message__guestCard {
+  position: relative;
+  background-color: #fff;
+  font-weight: 700;
+  padding: 25px;
+  border-radius: 50px 50px 50px 0px;
+}
+
+.message__name {
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+@media (max-width: 1300px) {
+  nav {
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .container {
+    width: 700px;
+  }
+
+  .app__form {
+    .form-container {
+      width: 700px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 500px;
+  }
+
+  .app__form {
+    .form-container {
+      width: 500px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 350px;
+  }
+
+  .app__form {
+    .form-container {
+      width: 350px;
+    }
+  }
+}
